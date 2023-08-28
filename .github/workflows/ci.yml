@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      '*'
+
+env:
+  FORCE_COLOR: 3
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
+        cache: yarn
+      env:
+        FORCE_COLOR: 0
+    - name: Install dependencies and set up example app
+      run: yarn install --frozen-lockfile --prefer-offline
+    - name: Lint
+      run: yarn lint
+    - name: Test
+      run: yarn test
