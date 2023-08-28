@@ -1,3 +1,7 @@
+# 3.2.1
+
+ - fix package name
+
 # 3.2.0
 
  - remove snyk as a dependency
