@@ -1,6 +1,6 @@
 {
   "name": "@potluri/eslint-config-xo-vue",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "Official ESLint shareable config for Vue to be used with eslint-config-xo https://github.com/xojs/xo",
   "repository": "https://github.com/ChocPanda/eslint-config-xo-vue",
   "author": "ChocPanda",

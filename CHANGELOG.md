@@ -1,3 +1,7 @@
+# 3.2.3
+
+ - add prepublish script
+
 # 3.2.2
 
  - fix release command
