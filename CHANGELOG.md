@@ -1,3 +1,8 @@
+# 3.2.4
+
+ - update release files list
+ - remove unused scripts, configs, deps
+
 # 3.2.3
 
  - add prepublish script
