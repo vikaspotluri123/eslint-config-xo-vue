@@ -1,4 +1,4 @@
-# [3.1.23](https://github.com/ChocPanda/eslint-config-xo-vue/compare/v3.1.22...v3.1.23) (2020-09-05)
+# 3.1.23
 
 
 ### Bug Fixes
