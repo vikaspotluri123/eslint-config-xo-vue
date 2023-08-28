@@ -19,7 +19,8 @@
     "lint:test": "xo",
     "lint:fix": "xo --fix",
     "lint:report": "xo --reporter junit > ./reports/xo/test-results.xml",
-    "clean": "rimraf dist && rimraf node_modules"
+    "clean": "rimraf dist && rimraf node_modules",
+    "prepublish": "yarn lint && yarn test"
   },
   "files": [
     "index.js",
