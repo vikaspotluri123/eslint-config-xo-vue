@@ -23,8 +23,7 @@
     "prepublish": "yarn lint && yarn test"
   },
   "files": [
-    "index.js",
-    "spaces.js"
+    "src"
   ],
   "engines": {
     "node": ">=10"
