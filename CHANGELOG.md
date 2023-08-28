@@ -1,3 +1,7 @@
+# 3.2.2
+
+ - fix release command
+
 # 3.2.1
 
  - fix package name
