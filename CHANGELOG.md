@@ -1,3 +1,9 @@
+# 3.2.0
+
+ - remove snyk as a dependency
+ - update core dependencies + lint
+ - switch to gh actions for test and release
+
 # 3.1.23
 
 
