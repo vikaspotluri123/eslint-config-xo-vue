@@ -1,1 +1,1 @@
-module.exports = require('./base')('tab');
+module.exports = require('./base.js')('tab');

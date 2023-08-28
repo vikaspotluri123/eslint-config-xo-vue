@@ -6,28 +6,28 @@ module.exports = {
 		[
 			'@semantic-release/changelog',
 			{
-				changelogFile: 'CHANGELOG.md'
-			}
+				changelogFile: 'CHANGELOG.md',
+			},
 		],
 		[
 			'@semantic-release/npm',
 			{
 				tarballDir: 'dist',
-				pkgRoot: 'dist'
-			}
+				pkgRoot: 'dist',
+			},
 		],
 		[
 			'@semantic-release/git',
 			{
 				message:
-					'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}' // eslint-disable-line no-template-curly-in-string
-			}
+					'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}', // eslint-disable-line no-template-curly-in-string
+			},
 		],
 		[
 			'@semantic-release/github',
 			{
-				assets: 'dist/*.tgz'
-			}
-		]
-	]
+				assets: 'dist/*.tgz',
+			},
+		],
+	],
 };

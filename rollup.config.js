@@ -1,5 +1,4 @@
-import path from 'path';
-
+import path from 'node:path';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import license from 'rollup-plugin-license';
@@ -12,45 +11,47 @@ const plugins = [
 	peerDeps(),
 	license({
 		banner: {
-			file: path.join(__dirname, 'LICENSE')
-		}
+			file: path.join(__dirname, 'LICENSE'),
+		},
 	}),
 	copy({
 		targets: [
 			{ src: 'package.json', dest: 'dist/' },
 			{ src: 'README.md', dest: 'dist/' },
-			{ src: 'CHANGELOG.md', dest: 'dist/' }
+			{ src: 'CHANGELOG.md', dest: 'dist/' },
 		],
-		outputFolder: 'dist'
-	})
+		outputFolder: 'dist',
+	}),
 ];
 
 const external = [
 	'eslint',
 	'eslint-config-xo',
 	'eslint-plugin-vue',
-	'eslint-plugin-unicorn'
+	'eslint-plugin-unicorn',
 ];
 
-export default [
+const rollupConfig = [
 	{
 		input: 'src/index.js',
 		output: {
 			file: 'dist/index.js',
 			format: 'cjs',
-			preferConst: true
+			preferConst: true,
 		},
 		external,
-		plugins
+		plugins,
 	},
 	{
 		input: 'src/spaces.js',
 		output: {
 			file: 'dist/spaces.js',
 			format: 'cjs',
-			preferConst: true
+			preferConst: true,
 		},
 		external,
-		plugins
-	}
+		plugins,
+	},
 ];
+
+export default rollupConfig;

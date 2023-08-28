@@ -1,1 +1,1 @@
-module.exports = require('./base')(2);
+module.exports = require('./base.js')(2);

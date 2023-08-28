@@ -1,18 +1,18 @@
 const xoConfigRules = require('eslint-config-xo').rules;
 
-module.exports = indent => {
+module.exports = (indent) => {
 	const defaultConfig = {
 		parser: require.resolve('vue-eslint-parser'),
 		parserOptions: {
 			ecmaVersion: 2018,
 			sourceType: 'module',
 			ecmaFeatures: {
-				jsx: true
-			}
+				jsx: true,
+			},
 		},
 		env: {
 			browser: true,
-			es6: true
+			es6: true,
 		},
 		plugins: ['vue'],
 		rules: {
@@ -26,7 +26,7 @@ module.exports = indent => {
 			'vue/component-name-in-template-casing': [
 				'error',
 				'PascalCase',
-				{ registeredComponentsOnly: false }
+				{ registeredComponentsOnly: false },
 			],
 			'vue/dot-location': xoConfigRules['dot-location'],
 			'vue/eqeqeq': xoConfigRules.eqeqeq,
@@ -34,16 +34,16 @@ module.exports = indent => {
 				'error',
 				{
 					singleline: 'never',
-					multiline: 'always'
-				}
+					multiline: 'always',
+				},
 			],
 			'vue/html-closing-bracket-spacing': [
 				'error',
 				{
 					startTag: 'never',
 					endTag: 'never',
-					selfClosingTag: 'always'
-				}
+					selfClosingTag: 'always',
+				},
 			],
 			'vue/html-end-tags': ['error'],
 			'vue/html-indent': [
@@ -53,8 +53,8 @@ module.exports = indent => {
 					attribute: 1,
 					baseIndent: 1,
 					closeBracket: 0,
-					alignAttributesVertically: true
-				}
+					alignAttributesVertically: true,
+				},
 			],
 			'vue/html-quotes': ['error', 'double'],
 			'vue/html-self-closing': [
@@ -63,11 +63,11 @@ module.exports = indent => {
 					html: {
 						void: 'always',
 						normal: 'always',
-						component: 'always'
+						component: 'always',
 					},
 					svg: 'always',
-					math: 'always'
-				}
+					math: 'always',
+				},
 			],
 			'vue/jsx-uses-vars': ['error'],
 			'vue/key-spacing': xoConfigRules['key-spacing'],
@@ -76,27 +76,24 @@ module.exports = indent => {
 				'error',
 				{
 					extensions: ['jsx', 'vue'],
-					shouldMatchCase: true
-				}
+					shouldMatchCase: true,
+				},
 			],
 			'vue/max-attributes-per-line': [
 				'error',
 				{
 					singleline: 3,
-					multiline: {
-						max: 1,
-						allowFirstLine: false
-					}
-				}
+					multiline: 1,
+				},
 			],
 			'vue/multiline-html-element-content-newline': [
 				'error',
 				{
-					ignoreWhenEmpty: true
-				}
+					ignoreWhenEmpty: true,
+				},
 			],
 			'vue/mustache-interpolation-spacing': ['error', 'always'],
-			'vue/name-property-casing': ['error', 'PascalCase'],
+			'vue/component-definition-name-casing': ['error', 'PascalCase'],
 			'vue/no-async-in-computed-properties': ['error'],
 			'vue/no-boolean-default': ['error', 'no-default'],
 			'vue/no-deprecated-scope-attribute': 'warn',
@@ -104,16 +101,16 @@ module.exports = indent => {
 			'vue/no-use-v-if-with-v-for': [
 				'error',
 				{
-					allowUsingIterationVar: false
-				}
+					allowUsingIterationVar: false,
+				},
 			],
 			'vue/no-dupe-keys': ['error'],
 			'vue/no-duplicate-attributes': [
 				'error',
 				{
 					allowCoexistClass: true,
-					allowCoexistStyle: true
-				}
+					allowCoexistStyle: true,
+				},
 			],
 			'vue/no-multi-spaces': xoConfigRules['no-multi-spaces'],
 			'vue/no-parsing-error': ['error'],
@@ -128,8 +125,8 @@ module.exports = indent => {
 			'vue/no-unused-components': [
 				'error',
 				{
-					ignoreWhenBindingPresent: true
-				}
+					ignoreWhenBindingPresent: true,
+				},
 			],
 			'vue/no-unused-vars': ['error'],
 			'vue/no-v-html': ['error'],
@@ -155,9 +152,9 @@ module.exports = indent => {
 						'LIFECYCLE_HOOKS',
 						'methods',
 						['template', 'render'],
-						'renderError'
-					]
-				}
+						'renderError',
+					],
+				},
 			],
 			'vue/prop-name-casing': ['error', 'camelCase'],
 			'vue/require-component-is': ['error'],
@@ -171,24 +168,24 @@ module.exports = indent => {
 			'vue/return-in-computed-property': [
 				'error',
 				{
-					treatUndefinedAsUnspecified: true
-				}
+					treatUndefinedAsUnspecified: true,
+				},
 			],
 			'vue/script-indent': [
 				'error',
 				indent,
 				{
 					baseIndent: 0,
-					switchCase: 1
-				}
+					switchCase: 1,
+				},
 			],
 			'vue/singleline-html-element-content-newline': [
 				'error',
 				{
 					ignoreWhenNoAttributes: true,
 					ignoreWhenEmpty: true,
-					ignores: ['pre', 'textarea']
-				}
+					ignores: ['pre', 'textarea'],
+				},
 			],
 			'vue/space-infix-ops': xoConfigRules['space-infix-ops'],
 			'vue/space-unary-ops': xoConfigRules['space-unary-ops'],
@@ -213,8 +210,8 @@ module.exports = indent => {
 			'vue/valid-v-slot': ['error'],
 			'vue/v-slot-style': ['warn'],
 			'vue/valid-v-text': ['error'],
-			'import/no-unresolved': ['error']
-		}
+			'import/no-unresolved': ['error'],
+		},
 	};
 
 	try {
@@ -228,22 +225,22 @@ module.exports = indent => {
 				'unicorn/prevent-abbreviations': [
 					'error',
 					{
-						whitelist: {
+						allowList: {
 							props: true,
-							assetsDir: true
-						}
-					}
+							assetsDir: true,
+						},
+					},
 				],
 				'unicorn/filename-case': [
 					'warn',
 					{
 						cases: {
 							pascalCase: true,
-							kebabCase: true
-						}
-					}
-				]
-			}
+							kebabCase: true,
+						},
+					},
+				],
+			},
 		};
 	} catch (error) {
 		console.log('eslint-plugin-unicorn is unavailable', error);
